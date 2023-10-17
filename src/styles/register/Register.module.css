@@ -1,0 +1,166 @@
+main {
+    --white: rgba(255, 255, 255, 1);
+    --black-fade: rgba(41, 41, 41, 1);
+    --gray: rgba(124, 124, 124, 1);
+    --green: rgba(114, 219, 115, 1);
+    --red: rgba(255, 0, 0, 1);
+    display: flex;
+    min-height: 100dvh;
+    height: 100%;
+    background-color: black;
+   
+}
+
+main section {
+    width: 50%;
+}
+
+.image-holder {
+    position: relative;
+    display: flex;
+}
+
+.image-holder img {
+    width: 100%;
+}
+
+.image-holder p {
+    color: var(--white);
+    position: absolute;
+    bottom: 12vh;
+    left: 5rem;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.register-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+}
+
+
+.heading h1 {
+    color: var(--green);
+    font-family: 'Single Day', cursive;
+    margin: 0;
+    margin-top: 5rem;
+    font-size: clamp(3.5rem,3vw,5rem);
+    font-weight: 400;
+    text-align: center;
+}
+
+.heading p {
+    margin-top: 0.5rem;
+    margin-bottom: 4rem;
+    letter-spacing: 0.3rem;
+}
+
+
+
+.register-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.register-form input {
+    background-color: var(--black-fade);
+    color: var(--white);
+    height: clamp(3.5rem,6vh,5rem);
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    position: relative;
+}
+
+.register-form input::placeholder {
+    font-size: 1.2rem;
+    position: absolute;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field p{
+    margin-top: 0.5rem;
+    color: var(--red);
+}
+
+.checking {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checking input {
+    cursor: pointer;
+}
+
+.checking p {
+    color: var(--gray);
+}
+
+.error {
+    margin: 0;
+    color: var(--red);
+}
+
+button {
+    background-color: var(--green);
+    color: var(--white);
+    padding: 1rem;    
+    font-size: 1.5rem;
+    border-radius: 28px;
+    cursor: pointer;
+}
+
+.terms {
+    color: var(--gray);
+    line-height: 1.5rem;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.terms span {
+    color: var(--green);
+    font-weight: 700;
+}
+
+@media screen and (max-width: 800px) {
+    .image-holder {
+        display: none;
+    }
+
+    .register-section {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .register-section {
+        width: 80%;
+    }
+}
