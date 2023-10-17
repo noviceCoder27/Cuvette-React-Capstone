@@ -63,7 +63,7 @@ const Form = () => {
             setErrorStyles(prevStyles => ({...prevStyles,email: {outline: "1px solid red"}}));
             return false;
         }
-        const isEmail = /^[a-z0-9]+@[a-z]+\.[a-z]$/.test(email);
+        const isEmail = /^[a-z0-9]+@[a-z]+\.[a-z]{1,3}$/.test(email);
         if(!isEmail) {
             setErrorMsg(prevMsg => ({...prevMsg,email: "Enter valid email"}));
             setErrorStyles(prevStyles => ({...prevStyles,email: {outline: "1px solid red"}}));
