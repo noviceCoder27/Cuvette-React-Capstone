@@ -1,17 +1,11 @@
-main {
-    --white: rgba(255, 255, 255, 1);
-    --black-fade: rgba(41, 41, 41, 1);
-    --gray: rgba(124, 124, 124, 1);
-    --green: rgba(114, 219, 115, 1);
-    --red: rgba(255, 0, 0, 1);
+.register-page {
     display: flex;
     min-height: 100dvh;
     height: 100%;
     background-color: black;
-   
 }
 
-main section {
+.section {
     width: 50%;
 }
 
@@ -73,7 +67,7 @@ main section {
 
 .register-form input {
     background-color: var(--black-fade);
-    color: var(--white);
+    color: var(--green);
     height: clamp(3.5rem,6vh,5rem);
     padding: 0.5rem;
     border: none;
@@ -127,13 +121,17 @@ input[type=number] {
     color: var(--red);
 }
 
-button {
+.register {
     background-color: var(--green);
     color: var(--white);
     padding: 1rem;    
     font-size: 1.5rem;
     border-radius: 28px;
     cursor: pointer;
+}
+
+.register:hover {
+    background-color: var(--green-secondary);
 }
 
 .terms {
@@ -149,7 +147,7 @@ button {
     font-weight: 700;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
     .image-holder {
         display: none;
     }

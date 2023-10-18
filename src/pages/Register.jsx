@@ -7,12 +7,12 @@ import Form from '../components/register/Form'
 
 const Register = () => {
   return (
-    <main className={styles.main}>
-      <section className= {styles["image-holder"]}>
+    <main className={styles["register-page"]}>
+      <section className= {`${styles["image-holder"]} ${styles.section}`}>
         <img src= {SuperAppImg} alt = "Disco Image" />
         <p>Discover new things on Superapp</p>
       </section>
-      <section className={styles["register-section"]}>
+      <section className={`${styles["register-section"]} ${styles.section}`}>
         <div className={styles.heading}>
           <h1>Super App</h1>
           <p>Create your new account</p>

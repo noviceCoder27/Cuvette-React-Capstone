@@ -1,7 +1,27 @@
+:root {
+  --white: rgba(255, 255, 255, 1);
+  --black-fade: rgba(41, 41, 41, 1);
+  --gray: rgba(124, 124, 124, 1);
+  --green: rgba(114, 219, 115, 1);
+  --red: rgba(255, 0, 0, 1);
+  --orange: rgba(255, 82, 9, 1);
+  --light-violet: rgba(215, 164, 255, 1);
+  --dark-green: rgba(20, 138, 8, 1);
+  --green-secondary: rgb(114, 243, 99);
+  --green-fade: rgb(39, 169, 25);
+  --light-blue: rgba(132, 194, 255, 1);
+  --brown: rgb(144, 37, 0, 1);
+  --indigo: rgba(115, 88, 255, 1);
+  --pink: rgba(255, 74, 222, 1);
+  --red: rgba(230, 30, 50, 1);
+  --light-green: rgba(108, 208, 97, 1);
+}
+
 body {
   margin: 0;
   padding: 0;
- 
+  background-color: black;
+  position: relative;
 }
 
 * {

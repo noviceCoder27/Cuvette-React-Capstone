@@ -139,7 +139,7 @@ const Form = () => {
                 </div>
                 {errorMsg.isChecked && <p className= {styles.error}>{errorMsg.isChecked}</p>}
             </div>
-            <button type = "submit">SIGN UP</button>
+            <button className = {styles.register} type = "submit">SIGN UP</button>
         </form>
     )
 }
