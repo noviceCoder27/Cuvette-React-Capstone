@@ -1,0 +1,92 @@
+.weather {
+    background-color: var(--blue-900);
+    border-radius: 20px;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.weather .date  {
+    background-color: var(--pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    padding: 0 2rem;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    height: 20%;
+}
+
+.weather .date  p {
+    font-size: clamp(1.5rem,2vw,2rem);
+    font-weight: 600;
+    
+}
+
+.weather .report {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    margin-top: 1rem;
+    
+}
+
+.weather .report > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    flex-grow: 1;
+    border-right: 2px solid var(--white);
+}
+
+.weather .report > div:last-child {
+   border:none;
+}
+
+.report .info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.weather .report .col3 {
+    gap: 2rem;
+    height: 120%;
+}
+
+.weather-icon {
+    width: 50%;
+    height: 60%;
+}
+
+.pressure-icon {
+    height: 100%;
+}
+
+
+.weather-text {
+    font-size: clamp(1rem,1.5vw,2.5rem);
+}
+
+.temp-text {
+    padding-top: 1.2rem;
+    font-size: clamp(1rem,3.5vw,3rem);
+}
+
+.report p {
+    margin: 0;
+}
+
+.report .info p {
+    font-size: clamp(1rem,1vw,2.5rem);
+}
+
+@media screen and (min-width: 1000px) {    
+    .weather {
+        height: 40%;
+    }
+}

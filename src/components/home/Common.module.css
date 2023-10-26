@@ -1,0 +1,53 @@
+.home-page {
+    display: flex;
+    flex-direction: column; 
+    font-family: 'Roboto',sans-serif;
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+.content-section {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.user-weather {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-section {
+    height: 10%;
+    display: flex;
+    padding: 0 2rem;
+    align-items: center;
+}
+
+.nav-section button {
+    margin-left: auto;
+    padding: 0.5rem 2rem;
+}
+
+@media screen and (max-width: 550px) {
+    .content-section {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .content-section {
+        flex-direction: row;
+        gap:6rem;
+        padding: 2rem 6rem;
+        margin-top: 6rem;
+    }
+
+    .user-weather {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 60%;
+    }
+}

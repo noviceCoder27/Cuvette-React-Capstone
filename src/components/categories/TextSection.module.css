@@ -1,0 +1,55 @@
+.text-section {
+    font-family: 'Roboto',sans-serif;
+    width: 100%;
+}
+
+
+.text-section h1 {
+    color: var(--green);
+    font-family: 'Single Day', cursive;
+    margin: 0;
+    font-size: clamp(3.5rem,3vw,5rem);
+    font-weight: 400;
+}
+
+.text-section h3 {
+    font-size: clamp(1rem,6vw,3rem);
+    font-weight: 700;
+}
+
+.selected-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.text-section div button {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: var(--white);
+    background-color: var(--dark-green);
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(0.8rem,1vw,1rem);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--dark-green);
+    border-radius: 40px;
+}
+
+.cross {
+    cursor: pointer;
+}
+
+.cross:hover {
+    color: black;
+}
+
+.warning {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--red);
+    font-size: clamp(0.8rem,1.5vw,1.2rem);
+}

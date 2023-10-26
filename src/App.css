@@ -12,9 +12,18 @@
   --light-blue: rgba(132, 194, 255, 1);
   --brown: rgb(144, 37, 0, 1);
   --indigo: rgba(115, 88, 255, 1);
+  --blue-600: rgba(87, 70, 234, 1);
+  --blue-300: rgba(159, 148, 255, 1);
+  --blue-900: rgba(16, 23, 68, 1);
+  --blue-700: rgba(30, 35, 67, 1);
+  --blue-800: rgba(25, 30, 57, 1);
+  --purple: rgba(255, 74, 222, 1)
+  --light-red: rgba(255, 106, 106, 1);
   --pink: rgba(255, 74, 222, 1);
   --red: rgba(230, 30, 50, 1);
   --light-green: rgba(108, 208, 97, 1);
+  --yellow: rgba(241, 199, 91, 1);
+  --black: rgba(0, 0, 0, 0.74);
 }
 
 body {

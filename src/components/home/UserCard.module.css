@@ -1,0 +1,82 @@
+.user {
+    background-color: var(--blue-600);
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.profile-image {
+    width: 30%;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    min-width: 10rem;
+}
+
+.profile-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+}
+
+.profile-text .headings {
+    line-height: 0.8rem;
+}
+
+
+.headings h3 {
+    font-weight: 400;
+    font-size: clamp(1rem,1.5vw,3rem);
+}
+
+.headings h1 {
+    font-size: clamp(1.2rem,2.5vw,3.5rem)
+}
+
+.profile-text .categories {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap; 
+    margin-top: 3rem;
+    max-height: 12vh;
+    overflow-y: scroll;
+}
+
+.categories::-webkit-scrollbar {
+    background-color: transparent;
+    width: 6px;
+}
+
+.categories::-webkit-scrollbar-thumb {
+    background-color: var(--blue-300);
+    height: 50px;
+    border-radius: 10px;
+}
+
+.profile-text .categories div {
+    width: 35%;
+    background-color: var(--blue-300);
+    padding: 1rem;
+    border-radius: 21px;
+}
+
+
+@media screen and (max-width: 550px) {
+    .user {
+        flex-wrap: wrap;
+    }
+    .profile-text {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .user {
+        height: 60%;
+    }
+}

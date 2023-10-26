@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from './../../styles/register/Register.module.css'
+import styles from './Form.module.css'
 
 
 const Form = () => {
@@ -8,7 +8,7 @@ const Form = () => {
         name: '',
         userName: '',
         email: '',
-        mobile: 0,
+        mobile: '',
         isChecked: false
     });
     const [errorMsg,setErrorMsg] = useState({
@@ -129,7 +129,7 @@ const Form = () => {
                 {errorMsg.email && <p>{errorMsg.email}</p>}
             </div>
             <div className={styles["input-field"]}>
-                <input value = {formInputs.mobile !== 0 ? formInputs.mobile : ''} type="number" placeholder='Mobile'onChange={(e) => setFormInputs(prevInputs => ({...prevInputs,mobile: e.target.value}))} style = {errorStyles.mobile}/>
+                <input value = {formInputs.mobile} type="number" placeholder='Mobile'onChange={(e) => setFormInputs(prevInputs => ({...prevInputs,mobile: e.target.value}))} style = {errorStyles.mobile}/>
                 {errorMsg.mobile && <p>{errorMsg.mobile}</p>}
             </div>
             <div>

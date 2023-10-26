@@ -1,0 +1,46 @@
+.register-page {
+    display: flex;
+    min-height: 100dvh;
+    height: 100%;
+    background-color: black;
+}
+
+.section {
+    width: 50%;
+}
+
+.image-holder {
+    position: relative;
+    display: flex;
+}
+
+.image-holder img {
+    width: 100%;
+}
+
+.image-holder p {
+    color: var(--white);
+    position: absolute;
+    bottom: 12vh;
+    left: 5rem;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+
+@media screen and (max-width: 850px) {
+    .image-holder {
+        display: none;
+    }
+
+    .register-section {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .register-section {
+        width: 80%;
+    }
+}

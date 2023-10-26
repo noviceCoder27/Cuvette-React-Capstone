@@ -1,0 +1,72 @@
+.news {
+    background-color: var(--white);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    min-height: 80vh;
+    max-height: max(80dvh,50rem);
+}
+
+.news .image-section {
+    flex-grow: 1;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    position: relative;
+
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+} 
+
+.news .heading{
+   position: absolute;
+   bottom: 2rem;
+   z-index: 2;
+}
+
+.news .time {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
+.news .overlay {
+    background-color: var(--black);
+    filter: opacity(50%);
+    width: 100%;
+    height: 10vh;
+    position: absolute;
+    bottom: 0;
+}
+
+.news .news-content {
+    flex-grow: 1;
+    color: black;
+    max-height: 50%;
+    overflow-y: scroll;
+    padding: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.news-content::-webkit-scrollbar {
+    background-color: transparent;
+    width: 6px;
+}
+
+.news-content::-webkit-scrollbar-thumb {
+    background-color: var(--blue-300);
+    height: 50px;
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 1000px) {
+    .news {
+        margin-top: 0;
+        width: 30%;
+    }
+}
