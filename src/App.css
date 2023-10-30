@@ -2,8 +2,8 @@
   --white: rgba(255, 255, 255, 1);
   --black-fade: rgba(41, 41, 41, 1);
   --gray: rgba(124, 124, 124, 1);
+  --light-gray: rgba(148, 148, 148, 1);
   --green: rgba(114, 219, 115, 1);
-  --red: rgba(255, 0, 0, 1);
   --orange: rgba(255, 82, 9, 1);
   --light-violet: rgba(215, 164, 255, 1);
   --dark-green: rgba(20, 138, 8, 1);
@@ -21,9 +21,13 @@
   --light-red: rgba(255, 106, 106, 1);
   --pink: rgba(255, 74, 222, 1);
   --red: rgba(230, 30, 50, 1);
+  --light-red: rgba(255, 106, 106, 1);
   --light-green: rgba(108, 208, 97, 1);
   --yellow: rgba(241, 199, 91, 1);
+  --light-yellow: rgba(255, 230, 166, 1);
   --black: rgba(0, 0, 0, 0.74);
+  --black-shadow: rgba(0, 0, 0, 0.61);
+  --gray-shadow: rgba(95, 88, 88, 0.23);
 }
 
 body {

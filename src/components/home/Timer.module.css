@@ -1,0 +1,114 @@
+.timer-section {
+    height: 30%;
+    background-color: var(--blue-700);
+    margin-top: 2rem;
+    border-radius: 21px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+}
+
+.progress {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue-800);
+    border-radius: 50%;
+    padding: 1.5rem;
+    box-shadow: 0 6px 26px 0 var(--black-shadow) inset,
+                -3px -7px 16px 0 var(--gray-shadow);
+}
+
+.timer {
+    display: flex;
+    font-size: clamp(1rem,1.2vw,2rem);
+    font-weight: 600;
+    gap: 0.5rem;
+}
+
+.timer-setter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.timer-values {
+    display: flex;
+    font-size: clamp(1.2rem,1.5vw,2rem);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timer-values p {
+    margin: 1rem;
+}
+
+.arrow {
+    color: var(--light-gray);
+    cursor: pointer;
+}
+
+.arrow:hover {
+    color: var(--white);
+}
+
+.colon {
+    height: fit-content;
+    align-self: center;
+    position: relative;
+    top: 1rem;
+}
+
+.title {
+    margin-bottom: 2rem;
+    font-size: 90%;
+    color: var(--light-gray);
+}
+
+.btns {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.timer-btn {
+    width: 60%;
+    padding: 0.5rem 0;
+    color: var(--white);
+    background-color: var(--light-red);
+    font-size: 150%;
+    border: 1px solid var(--light-red);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.timer-btn:hover {
+    background-color: var(--red);
+}
+
+@media screen and (min-width: 600px){
+    .timer-section {
+        flex-direction: row;
+    }
+
+    .timer-setter {
+        width: 70%;
+    }
+
+    .progress {
+        width: 40%;
+    }
+}

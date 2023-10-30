@@ -39,15 +39,36 @@
 @media screen and (min-width: 1000px) {
     .content-section {
         flex-direction: row;
-        gap:6rem;
-        padding: 2rem 6rem;
-        margin-top: 6rem;
+        gap:3rem;
+        padding: 2rem 3rem;
+        margin-top: 2rem;
     }
 
+    .left-section {
+        width: 70%;
+    }
+
+    .inner-left {
+        display: flex;
+        height: 60%;
+    }
     .user-weather {
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px ) {
+    .content-section {
+        flex-direction: column;
+    }
+
+    .left-section {
+        width: 100%;
+    }
+
+    .user-weather {
+        width: 70%;
     }
 }

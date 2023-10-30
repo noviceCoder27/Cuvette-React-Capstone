@@ -38,11 +38,17 @@ const Weather = ({date,time}) => {
                     <p className = {styles["weather-text"]}>{weather?.condition.text}</p>
                 </div>
                 <div>
+                    <div className={styles["col-border"]}></div>
+                </div>
+                <div className={styles.col3}>
                     <p className={styles["temp-text"]}>{weather?.temp_c}°C</p>
                     <div className={`${styles.info}`}>
                         <img src= {PressureIcon} alt="Pressure Icon" className = {styles["pressure-icon"]}/>
                         <p className = {styles["pressure-text"]}>{weather?.pressure_mb} mbar <br/> Pressure</p>
                     </div>
+                </div>
+                <div>
+                    <div className={styles["col-border"]}></div>
                 </div>
                 <div className={styles.col3}>
                     <div className={`${styles.info}`}>

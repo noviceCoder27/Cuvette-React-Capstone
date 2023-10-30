@@ -1,10 +1,11 @@
 import styles from './../components/home/Common.module.css'
-import ProfilePic from './../assets/profile-pic.png'
 import News from '../components/home/News'
 import Weather from '../components/home/Weather'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import UserCard from '../components/home/UserCard'
+import Notes from './../components/home/Notes';
+import Timer from '../components/home/Timer'
 
 
 const Home = () => {
@@ -47,12 +48,19 @@ const Home = () => {
     getToday();
     getCurrentTime();
   },[]);
+
   return (
     <main className = {styles["home-page"]}>
       <section className={styles["content-section"]}>
-        <div className= {styles["user-weather"]}>
-            <UserCard />
-            <Weather date = {date} time = {time}/>
+        <div className= {styles["left-section"]}>
+          <div className={styles["inner-left"]}>
+            <div className= {styles["user-weather"]}>
+                <UserCard />
+                <Weather date = {date} time = {time}/>
+            </div>  
+            <Notes />
+          </div>
+          <Timer />
         </div>
         <News date = {date} time = {time}/>
       </section>
