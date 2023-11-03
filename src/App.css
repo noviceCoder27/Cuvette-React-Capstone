@@ -3,6 +3,7 @@
   --black-fade: rgba(41, 41, 41, 1);
   --gray: rgba(124, 124, 124, 1);
   --light-gray: rgba(148, 148, 148, 1);
+  --dark-gray:rgb(44, 40, 40);
   --green: rgba(114, 219, 115, 1);
   --orange: rgba(255, 82, 9, 1);
   --light-violet: rgba(215, 164, 255, 1);
@@ -26,6 +27,7 @@
   --yellow: rgba(241, 199, 91, 1);
   --light-yellow: rgba(255, 230, 166, 1);
   --black: rgba(0, 0, 0, 0.74);
+  --dark: rgba(23, 21, 21, 0.74);
   --black-shadow: rgba(0, 0, 0, 0.61);
   --gray-shadow: rgba(95, 88, 88, 0.23);
 }
