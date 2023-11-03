@@ -4,6 +4,11 @@ import styles from './UserCard.module.css'
 
 
 const UserCard = () => {
+  const {name, userName, email} = JSON.parse(localStorage.getItem("user"));
+  const categories = JSON.parse(localStorage.getItem("categories"));
+  const displayCategories = categories.map((category,index) => (
+    <div key = {index}>{category}</div>
+  ))
   return (
     <div className={styles.user}>
         <div className={styles["profile-image"]}>
@@ -11,15 +16,12 @@ const UserCard = () => {
         </div>
         <div className={styles["profile-text"]}>
         <div className={styles.headings}>
-            <h3>KK Vinay</h3>
-            <h3>Vinay090@gmail.com</h3>
-            <h1>vinay060</h1>
+            <h3>{name}</h3>
+            <h3>{email}</h3>
+            <h1>{userName}</h1>
         </div>
         <div className={styles.categories}>
-            <div>Horror</div>
-            <div>Thriller</div>
-            <div>Action</div>
-            <div>Fiction</div>
+            {displayCategories}
         </div>
         </div>
     </div>

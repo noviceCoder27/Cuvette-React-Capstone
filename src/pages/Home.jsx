@@ -6,9 +6,10 @@ import { useState } from 'react'
 import UserCard from '../components/home/UserCard'
 import Notes from './../components/home/Notes';
 import Timer from '../components/home/Timer'
-
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+  const navigate = useNavigate();
   const [date,setDate] = useState({day: null, month: null,year: null});
   const [time,setTime] = useState({hours: null,minuts: null,amORPm: null})
   const getToday = () => {
@@ -65,7 +66,7 @@ const Home = () => {
         <News date = {date} time = {time}/>
       </section>
       <section className={styles["nav-section"]}>
-        <button>Browse</button>
+        <button onClick={() => navigate("/browse")}>Browse</button>
       </section>
     </main>
   )

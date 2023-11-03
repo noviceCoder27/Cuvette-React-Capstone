@@ -2,9 +2,11 @@ import styles from './../components/categories/Common.module.css';
 import { useState } from 'react';
 import Gallery from '../components/categories/Gallery';
 import TextSection from '../components/categories/TextSection';
+import { useNavigate } from 'react-router-dom';
 
 
 const Categories = () => {
+    const navigate = useNavigate();
     const [selectedCategories,setSelectedCategories] = useState([]);
     const [categoryCriteria,setCategoryCriteria] = useState(false);
     const [border,setBorder] = useState({
@@ -67,6 +69,7 @@ const Categories = () => {
         }
         localStorage.setItem("categories",JSON.stringify(selectedCategories));
         setCategoryCriteria(false);
+        navigate("/");
     }
 
     return (

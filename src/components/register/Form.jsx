@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import styles from './Form.module.css'
+import { useNavigate } from 'react-router-dom';
 
 
 const Form = () => {
-
+    const navigate = useNavigate();
     const [formInputs,setFormInputs] = useState({
         name: '',
         userName: '',
@@ -110,6 +111,7 @@ const Form = () => {
         const isTermsChecked = validateCheckbox();
         if(nameCheck && userNameCheck && emailCheck && mobileNumCheck && isTermsChecked) {
             localStorage.setItem('user',JSON.stringify(formInputs));
+            navigate("/category");
         }
     }
 
