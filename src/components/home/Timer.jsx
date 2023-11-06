@@ -164,7 +164,6 @@ const Timer = () => {
                     <CountdownCircleTimer
                     isPlaying = {true}
                     duration={startTimer ? timeInSeconds: 0}
-                    size={"200"}
                     strokeWidth={6}
                     trailColor= 'var(--blue-800)'
                     colors={"var(--light-red)"}
