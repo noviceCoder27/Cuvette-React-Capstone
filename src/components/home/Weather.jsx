@@ -12,12 +12,12 @@ const Weather = ({date,time}) => {
         navigator.geolocation.getCurrentPosition(async (position) => {
             const lat = position.coords.latitude;
             const lon = position.coords.longitude;
-            const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=565b2df0c55743a8813161523232510&q=${lat},${lon}`);
+            const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=565b2df0c55743a8813161523232510&q=${lat},${lon}`);
             const data = await response.json();
             setWeather(data.current);
         },
         async() => {
-            const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=565b2df0c55743a8813161523232510&q=Guwahati`);
+            const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=565b2df0c55743a8813161523232510&q=Guwahati`);
             const data = await response.json();
             setWeather(data.current);
         });
