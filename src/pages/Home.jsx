@@ -7,11 +7,21 @@ import UserCard from '../components/home/UserCard'
 import Notes from './../components/home/Notes';
 import Timer from '../components/home/Timer'
 import { useNavigate } from 'react-router-dom'
+import { useRef } from 'react'
 
 const Home = () => {
   const navigate = useNavigate();
   const [date,setDate] = useState({day: null, month: null,year: null});
-  const [time,setTime] = useState({hours: null,minuts: null,amORPm: null})
+  const [time,setTime] = useState({hours: null,minuts: null,amORPm: null});
+  const [height,setHeight] = useState(screen.height);
+  const heightRef = useRef(null);
+  window.onresize = () => {
+    setHeight(screen.height)
+  }
+  useEffect(() => {
+    heightRef.current.style.height = `${height +100}`
+  },[height]);
+
   const getToday = () => {
     const dateObj = new Date();
     let day = dateObj.getDate();
@@ -51,7 +61,7 @@ const Home = () => {
   },[]);
 
   return (
-    <main className = {styles["home-page"]}>
+    <main className = {styles["home-page"]} ref = {heightRef}>
       <section className={styles["content-section"]}>
         <div className= {styles["left-section"]}>
           <div className={styles["inner-left"]}>

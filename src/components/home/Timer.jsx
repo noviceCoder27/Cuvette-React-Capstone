@@ -163,12 +163,12 @@ const Timer = () => {
                 <div className= {styles.circle}>
                     <CountdownCircleTimer
                     isPlaying = {true}
-                    duration={timeInSeconds}
+                    duration={startTimer ? timeInSeconds: 0}
                     size={"200"}
                     strokeWidth={6}
                     trailColor= 'var(--blue-800)'
                     colors={"var(--light-red)"}
-                    onComplete={() => ({ shouldRepeat: false})}
+                    onComplete={() => ({ shouldRepeat: startTimer})}
                     >
                         {renderTime}
                     </CountdownCircleTimer>
