@@ -73,7 +73,7 @@ const Home = () => {
           </div>
           <Timer />
         </div>
-        <News date = {date} time = {time}/>
+        <News date = {date} time = {time} />
       </section>
       <section className={styles["nav-section"]}>
         <button onClick={() => navigate("/browse")}>Browse</button>
