@@ -21,13 +21,24 @@
 .nav-section {
     height: 10%;
     display: flex;
-    padding: 0 2rem;
+    padding: 0 1rem;
     align-items: center;
 }
 
 .nav-section button {
     margin-left: auto;
     padding: 0.5rem 2rem;
+    margin-right: 1.5rem;
+    transform: translateY(-1rem);
+    color: var(--white);
+    background-color: var(--green-fade);
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(0.8rem,1.5vw,1.2rem);
+    padding: 0.5rem 1rem;
+    max-height: 2rem;
+    border: 1px solid var(--dark-green);
+    border-radius: 40px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 550px) {
@@ -69,6 +80,6 @@
     }
 
     .user-weather {
-        width: 70%;
+        width: 100%;
     }
 }

@@ -1,7 +1,7 @@
 .user {
     background-color: var(--blue-600);
     display: flex;
-    gap: clamp(2rem,4vw,3rem);
+    gap: clamp(2rem,3vw,4rem);
     padding: 2rem;
     border-radius: 20px;
 }
@@ -29,10 +29,12 @@
 
 .headings h3 {
     font-weight: 400;
+    margin-bottom: 1rem;
     font-size: clamp(1rem,1vw,2rem);
 }
 
 .headings h1 {
+    margin-bottom: 1rem;
     font-size: clamp(1.2rem,2vw,2.5rem)
 }
 
@@ -44,6 +46,7 @@
     max-height: 12vh;
     overflow-y: scroll;
 }
+
 
 .categories::-webkit-scrollbar {
     background-color: transparent;
@@ -57,7 +60,7 @@
 }
 
 .profile-text .categories div {
-    width: 30%;
+    width: fit-content;
     background-color: var(--blue-300);
     padding: 0.5rem 1rem;
     border-radius: 21px;

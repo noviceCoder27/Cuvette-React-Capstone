@@ -3,12 +3,22 @@ import styles from './Timer.module.css'
 import {BiSolidDownArrow} from 'react-icons/bi'
 import {BiSolidUpArrow} from 'react-icons/bi'
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
+import { useEffect } from 'react';
+
 
 const Timer = () => {
     const [startTimer,setStartTimer] = useState(false);
     const [time,setTime] = useState({hours: '00', minutes: '00', seconds: '00'});
     const [timeInSeconds,setTimeInSeconds] = useState(0);
+    const [timerID,setTimerID] = useState(null);
 
+    
+    useEffect(() => {
+        if((time.hours === '00' && time.minutes === '00' && time.seconds === '00') || !startTimer) {
+            clearInterval(timerID);
+            setStartTimer(false);
+        }
+    },[time]);
 
     const renderTime = () => {
         const showInTimer = time;
@@ -102,26 +112,60 @@ const Timer = () => {
             }      
         }
     }
+    const decrementTimer = () => {
+        setTime(prevTime => {
+            let hours = parseInt(prevTime.hours);
+            let minutes = parseInt(prevTime.minutes);
+            let seconds = parseInt(prevTime.seconds);
+            
+            if(seconds > 0) {
+                seconds--;
+            } else if(minutes > 0) {
+                seconds = 59;
+                minutes--;
+            } else if(hours > 0) {
+                seconds = 59;
+                minutes = 59;
+                hours--;
+            }
+            
+            return {
+                hours: hours.toString().padStart(2, '0'),
+                minutes: minutes.toString().padStart(2, '0'),
+                seconds: seconds.toString().padStart(2, '0')
+            };
+        });
+    }
+
 
     const timer = () => {
         setStartTimer(prev=> !prev);
+        const shoulStart = !startTimer;
         const totalHoursInSeconds = parseInt(time.hours) * 60 * 60;
         const totalMinutesInSeconds = parseInt(time.minutes) * 60;
         const totalTime = totalHoursInSeconds + totalMinutesInSeconds + parseInt(time.seconds);
-        setTimeInSeconds(totalTime);
+        if(shoulStart) {
+            setTimeInSeconds(totalTime);
+            const id = setInterval(() => {
+                decrementTimer();
+            }, 1000);
+            setTimerID(id);
+        } else {
+            setTime({hours: '00', minutes: '00', seconds: '00'});
+            setTimeInSeconds(0);
+        }
     }
 
+    
     return (
         <div className={styles["timer-section"]}>
             <div className={styles.progress}>
                 <div className= {styles.circle}>
                     <CountdownCircleTimer
-                    isPlaying = {startTimer? true : false}
-                    initialRemainingTime={timeInSeconds}
-                    duration={startTimer? timeInSeconds: 0}
+                    isPlaying = {true}
+                    duration={timeInSeconds}
                     size={"200"}
                     strokeWidth={6}
-                    remainingTime = {startTimer ? timeInSeconds: 0}
                     trailColor= 'var(--blue-800)'
                     colors={"var(--light-red)"}
                     onComplete={() => ({ shouldRepeat: false})}
